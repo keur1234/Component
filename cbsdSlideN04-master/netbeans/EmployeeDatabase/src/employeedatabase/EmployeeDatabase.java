@@ -27,10 +27,10 @@ public class EmployeeDatabase {
         /*String derbyEmbeddedDriver = "org.apache.derby.jdbc.EmbeddedDriver";
         String msAccessDriver = "sun.jdbc.odbc.JdbcOdbcDriver";
         String msSQlDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String oracleDriver = "oracle.jdbc.driver.OracleDriver";*/
+        String oracleDriver = "oracle.jdbc.driver.OracleDriver";
 
         String derbyClientDriver = "org.apache.derby.jdbc.ClientDriver";
-        //String mySqlDriver = "com.mysql.cj.jdbc.Driver";
+        String mySqlDriver = "com.mysql.cj.jdbc.Driver";
         //load driver
         Class.forName(derbyClientDriver);
         //Class.forName(mySqlDriver);
