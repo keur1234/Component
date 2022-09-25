@@ -39,13 +39,14 @@ public class StudentDatabaseWithDBClass {
         StudentTable.insertStudent(dbHandler, stu3);
         StudentTable.insertStudent(dbHandler, stu4);
 
+        stu4.setGPA(3.05);
+        StudentTable.updateStudent(dbHandler, stu4);
 
-//      StudentTable.removeStudent(dbHandler, stu1);
-//      StudentTable.removeStudent(dbHandler, stu2);
-//      StudentTable.removeStudent(dbHandler, stu3);
-//      StudentTable.removeStudent(dbHandler, stu4);
-
-//        StudentTable.updateStudent(dbHandler, stu4);
+        StudentTable.removeStudent(dbHandler, stu1);
+        StudentTable.removeStudent(dbHandler, stu2);
+        StudentTable.removeStudent(dbHandler, stu3);
+        StudentTable.removeStudent(dbHandler, stu4);
+        
 
 
         ArrayList<Student> StudentList = StudentTable.findAllStudent(dbHandler);
@@ -56,6 +57,7 @@ public class StudentDatabaseWithDBClass {
     }
     
     public static void printAllStudent(ArrayList<Student> stuList) {
+        System.out.println("All student list");
         for(int i = 0; i < stuList.size(); i++) {
             System.out.print(stuList.get(i).getId() + " ");
             System.out.print(stuList.get(i).getFname() + " ");

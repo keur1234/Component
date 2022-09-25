@@ -21,9 +21,10 @@ public class StudentTable {
         int rowUpdated;
         try {
             rowUpdated = dbHandler.update(sql, stu.getFname(), stu.getLname(), stu.getId(), stu.getGPA());
+            System.out.println(stu.getFname() + " Has updated");
         }
         catch (SQLException ex ) {
-            
+            System.out.println("No data change");
             rowUpdated = 0;
         }
         
@@ -35,8 +36,10 @@ public class StudentTable {
          int rowDeleted;
          try {
             rowDeleted = dbHandler.update(sql, stu.getId());
+            System.out.println(stu.getFname() + "Has been deleted");
          }
          catch (SQLException ex ) {
+             System.out.println("No data change");
              rowDeleted = 0;
          }
         return rowDeleted;
@@ -48,8 +51,10 @@ public class StudentTable {
          int rowInserted;
          try {
              rowInserted = dbHandler.update(sql, stu.getId(), stu.getFname(), stu.getLname(), stu.getGPA());
+             System.out.println("Added " + stu.getFname());
          }
          catch(SQLException ex ) {
+             System.out.println("No data change");
              rowInserted = 0;
          }
          return rowInserted;
